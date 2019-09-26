@@ -1,11 +1,22 @@
 .login-container{
+    overflow: hidden;
     .graphic-container{
         background: #1D32C4;
+        background-image: linear-gradient( to bottom left, #1D32C4, rgb(62, 79, 192));
         height: 100vh;
         display: flex!important;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        position: relative;
+        z-index: 99;
+        .svg-plus-blue{
+            position: absolute;
+            bottom: 20%;
+            left: -70px;
+            z-index: -98;
+        }
+        
         .graphic-items{
             width: 60%;
             h1{
@@ -13,11 +24,13 @@
                 font-size: 55px;
                 font-weight: 700;
                 line-height: 70px;
+                position: relative;
             }
             p{
-                color: #abb3d9;
+                color: #bdc3d8;
                 font-size: 14px;
                 margin: 20px 0;
+                position: relative;
             }
         }
     }
@@ -27,14 +40,30 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        position:relative;
+        .svg-plus-blue{
+            position: absolute;
+            bottom: -37px;
+            right: -40px;
+        }
+        .svg-dplus-blue{
+            position: absolute;
+            left: -46px;
+            top: 6%;
+        }
+        .svg-box-grey{
+            position: absolute;
+            left:0%;
+            bottom: 0;
+        }
         .form-items{
             padding: 15%;
             h3{
                 font-weight: bold;
-                margin-bottom: 30px;
+                margin-bottom: 10%;
             }
             p{
-                margin-top: 30px;
+                margin-top: 10%;
                 font-size: 14px;
                 position: relative;
                 padding-bottom: 30px;
@@ -46,7 +75,7 @@
                 content: "";
                 height: 3px;
                 width: 20%;
-                background: #5ad9f2;
+                background: #4364d1;
             }
             form{
                 margin-top: 15%;
@@ -85,27 +114,33 @@
                         color: #7c8491;
                     }
                 }
-                button{
+                .login-btn{
+                    background: #31d088;
+                    color: #fff;
                     margin-top: 40px;
                     width:49%;
                     height: 50px;
                     outline: none;
                     border: none;
                     border-radius: 3px;
-                }
-                .login-btn{
-                    background: #31d088;
-                    color: #f4f4fb;
+                    border: 1px solid #2ab878;
+
                 }
                 .register-btn{
                     margin-left: 2%;
                     color: #7c8491;
                     border: 1px solid #dbdee0;
+                    line-height: 48px;
+                    display: inline-block;
+                    text-align: center;
+                    width:49%;
+                    height: 50px;
+                    border-radius: 3px;
                     // box-shadow: 2px 2px 10px 1px #eaecee;s
                 }
                 
             }
-            a{
+            .forgot-pwd{
                 color: #535D67;
                 text-decoration: underline;
                 font-size: 14px;

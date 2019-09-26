@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
+import plus_blue from "../../images/plus-faded-blue.svg";
+import box_grey from "../../images/box-grey.svg";
+import {Link} from "react-router-dom";
 import {
 	loginUser,
 } from "../../actions/commonActions";
@@ -21,27 +24,32 @@ class Login extends Component {
 									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 								</p>
 							</div>
+							<img src={plus_blue} alt="plus sign" className="svg-plus-blue" height="400" width="400"/>
 						</div>
 					</div>
 					<div className="col-md-5 col-xs-12 col-sm-12">
 						<div className="form-container">
 							<div className="form-items">
-								<h3>Welcome to <span>eprescription+</span></h3>
+								<h3>Welcome to e-healthcare</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 								<form>
 									<div className="input-container">
 										<input className="login-input login-username" type="text" placeholder="USERNAME"/>
-										<i class="fa fa-user-o" aria-hidden="true"></i>
+										<i className="fa fa-user-o" aria-hidden="true"></i>
 									</div>
 									<div className="input-container">
 										<input className="login-input login-password" type="password" placeholder="PASSWORD"/>
-										<i class="fa fa-key" aria-hidden="true"></i>
+										<i className="fa fa-key" aria-hidden="true"></i>
 									</div>
-									<a href="#">Don't remember your password?</a>
+									
+									<a className="forgot-pwd" href="/login">Don't remember your password?</a>
 									<button className="login-btn">Login</button>
-									<button className="register-btn">Create Profile</button>
+									<Link className="register-btn" to="/register/">Register</Link>
 								</form>
 							</div>
+							<img src={plus_blue} alt="plus sign" className="svg-plus-blue" height="100" width="100"/>
+							{/* <img src={plus_blue_1} className="svg-dplus-blue" height="120" width="120"/> */}
+							<img src={box_grey} alt="box" className="svg-box-grey" height="45" width="45"/>
 						</div>
 					</div>
 				</div>
