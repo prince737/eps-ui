@@ -13,7 +13,6 @@
     align-items: center;
     font-size: 14px;
     width: 90%;
-    justify-content: center;
     line-height: 14px;
     i{
       color: #721c24;
@@ -89,6 +88,9 @@
     padding: 0 15px!important;
     input{
       margin-left:5px;
+    }
+    .error-alert{
+      margin-top: 50px;
     }
     .gender-label{
       display:block;
@@ -266,6 +268,7 @@
         border-radius: 3px;
         border: 1px solid #3651aa;
       }
+      
       p{
         margin-top: 1rem;
         margin-bottom: 0;
@@ -278,7 +281,7 @@
   }
   .submit-col-wrapper{
     padding: 0!important;
-    div{
+    .input-container, .submit-container{
       padding: 2rem 15px;
     }
   }
@@ -340,6 +343,101 @@
       content: "";
     }
   }
+  
+}
 
+@media only screen and (max-width : 480px) {
+  .register-container{
+    .input-col-wrapper{
+      .input-container{
+        margin-bottom: 30px;
+      }
+    }
+    .submit-col-wrapper{
+      .input-container{
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .submit-container{
+        padding-left: 15px;
+        padding-right: 15px;
+        border-left: none;
+      }
+    }
+  }
+  
+}
+
+@media only screen and (max-width : 480px) {
+  .register-container{
+    .input-col-wrapper{
+
+      .verification-container:first-child{
+        margin-bottom: 30px;
+        .otp-container{
+          display: block;
+          span{
+            display: block;
+            font-weight: 500;
+          }
+          input[name=mob_otp_1]{
+            margin-left: 0;
+          }
+          input[name=email_otp_1]{
+            margin-left: 0;
+          }
+          
+        }
+        .verify-button{
+          margin-right: 10px;
+        }
+      }
+      .input-container{
+        margin-bottom: 30px;
+      }
+      .input-container:nth-last-child(1){
+        margin-bottom: 0px;
+      }
+    }
+    .upload{
+      margin-top: 70px;
+      padding-left: 15px!important;
+      padding-right: 15px!important;
+      .upload-flex{
+        display: block;
+        position: relative;
+        section{
+          width: 90%;
+          margin-top: 140px;
+        }
+        img{
+          top: 40px;
+          position:absolute;
+          padding-left: 0;
+        }
+      }
+    }
+    .submit-col-wrapper{
+      .input-container{
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .submit-container{
+        padding-left: 15px;
+        padding-right: 15px;
+        border-left: none;
+        span{
+          align-items: flex-start;
+          button{
+            width: 90%;
+          }
+          p{
+            width: 90%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
   
 }
